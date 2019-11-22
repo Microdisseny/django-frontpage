@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  .frontpage-login-button, .frontpage-login-button:visited {
+    color: white !important;
+    padding: 10px 15px !important;
+  }
+</style>
+{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<h1>Welcome</h1>
+
+{% if user.is_authenticated and not user.is_staff%}
+<p>{% blocktrans with username=user.username %}User "{{ username }}" does not have access to the admin site.{% endblocktrans %}</p>
+<p>{% trans 'Please log in with a different user.' %}</p>
+<br>
+<div>
+  <a class="button frontpage-login-button" href="{{ relogin_url }}">{% trans 'Log in' %}</a>
+</div>
+{% else %}
+<p>{% trans 'You are about to enter a private area.' %}</p>
+<br>
+<div>
+  <a class="button frontpage-login-button" href="{{ login_url }}">{% trans 'Log in' %}</a>
+</div>
+{% endif %}
+{% endblock %}
