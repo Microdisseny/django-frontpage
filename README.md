@@ -2,13 +2,13 @@
 
 Show a page before your users authenticate into the admin site.
 
-[![Build Status](https://travis-ci.org/Microdisseny/django-frontpage.svg?branch=master)](https://travis-ci.org/Microdisseny/django-frontpage) [![Coverage Status](https://coveralls.io/repos/github/Microdisseny/django-frontpage/badge.svg?branch=master)](https://coveralls.io/github/Microdisseny/django-frontpage?branch=master)
+[![Build Status](https://travis-ci.org/Microdisseny/django-frontpage.svg?branch=master)](https://travis-ci.org/Microdisseny/django-frontpage) [![Coverage Status](https://coveralls.io/repos/github/Microdisseny/django-frontpage/badge.svg?branch=master)](https://coveralls.io/github/Microdisseny/django-frontpage?branch=master) [![PyPI version](https://badge.fury.io/py/django-frontpage.svg)](https://badge.fury.io/py/django-frontpage)
 
 Valid users will go straight to the admin site, others will land in the frontpage
 where you can show an app description, warning, etc. You only need to provide
 your own template.
 
-After clicking login button in the frontpage, the user will be redirected to the
+After clicking the login button in the frontpage, the user will be redirected to the
 original url. If there was no original url, the user will be redirected to the
 `FRONTPAGE_ADMIN_PREFIX`.
 
@@ -122,7 +122,7 @@ When any page of the `admin` site is accessed then:
 ## Tests
 
 ```
-pip install -r requirements-dev.txt 
+pip install -r requirements-dev.txt
 pip install Django
 pytest
 ```
