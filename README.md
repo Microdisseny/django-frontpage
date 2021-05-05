@@ -15,7 +15,7 @@ original url. If there was no original url, the user will be redirected to the
 
 ## Getting started
 
-Works with Django version 2.0 to 3.1.
+Works with Django version 2.0 to 3.2.
 
 Tested with Django-supported Python versions.
 
