@@ -8,13 +8,22 @@ python:
 
 env:
   - DJANGO="https://github.com/django/django/archive/main.tar.gz"
-  - DJANGO="Django==3.1.*"
+  - DJANGO="Django==3.2.*"
 
 matrix:
   allow_failures:
     - env: DJANGO="https://github.com/django/django/archive/main.tar.gz"
 
   include:
+    - python: "3.6"
+      env: DJANGO="Django==3.2.*"
+    - python: "3.7"
+      env: DJANGO="Django==3.2.*"
+    - python: "3.8"
+      env: DJANGO="Django==3.2.*"
+    - python: "3.9"
+      env: DJANGO="Django==3.2.*"
+
     - python: "3.6"
       env: DJANGO="Django==3.1.*"
     - python: "3.7"
